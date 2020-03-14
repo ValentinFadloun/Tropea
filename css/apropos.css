@@ -5,6 +5,7 @@
     font-family: 'Roboto','sans-serif';
     --color-typo: #d3d5d6;
 }
+
 body{
     margin: 0;
     width: 100%;
@@ -12,7 +13,7 @@ body{
     
 }
 
- h2{
+ main > h2{
     display: block;
     width: 100%;
     margin: 0;
@@ -21,7 +22,7 @@ body{
     font-family: 'Roboto','sans-serif';
     color: var(--color-typo);
 }
-img{
+main > article[title="apropos"] > img{
     display: inline-block;
     position: relative;
     width: 250px;
@@ -30,7 +31,7 @@ img{
     border-radius: 160px;
 }
 
-article{
+main > article{
     display: inline-block;
     position: relative;
     width: 40%;
@@ -39,10 +40,10 @@ article{
     margin-left:2%;
 
 }
-section{
+main > article[title="apropos"] > section{
     margin-top: 10%;
 }
-iframe{
+main > article > iframe{
     display: inline-block;
     position: relative;
     width: 90%;;
