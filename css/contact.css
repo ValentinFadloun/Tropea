@@ -17,14 +17,14 @@ h2{
     color: var(--color-typo);
     
 }
-article[title="contact"]{
+main > article[title="contact"]{
     display: flex;
     width: calc(25%*3); /*l'article contient 3 sections*/
     margin: auto;
     
 }
 
-article[title="contact"] > section{
+main > article[title="contact"] > section{
     width:30%;
     height: 25vw;
     background-color: whitesmoke;
@@ -34,7 +34,7 @@ article[title="contact"] > section{
 }
 
 
-article[title="contact"] > section > a > img{
+main > article[title="contact"] > section > a > img{
     display: block;
     width: 100px;
     height: 100px;
@@ -44,54 +44,54 @@ article[title="contact"] > section > a > img{
 }
 
 
-article[title="contact"] > section > a {
+main > article[title="contact"] > section > a {
     text-decoration: none;
     text-align: center;
     color: --color-typo;
 }
 
-article[title="contact"] > section > a > span{
+main > article[title="contact"] > section > a > span{
     background-color: #e2e6eb;
     border-radius: 10px ;
     padding: 2% 15% 2% 15%;
 }
 /*--------------------------------laptop-----------------------------------*/
 @media screen and (max-width: 1050px) {
-    article[title="contact"]{
+    main > article[title="contact"]{
         width:80%;
         height: 40vw;
     }
-    article[title="contact"] > section{
+    main > article[title="contact"] > section{
         height:30vw;
 
     }
-    article[title="contact"] > section > a > img{
+    main > article[title="contact"] > section > a > img{
         width: 40%;    
     }
     
 }
 /*--------------------------------mobile-----------------------------------*/
 @media screen and (max-width: 740px) {
-    article[title="contact"]{
+    main > article[title="contact"]{
         width: 50%;
         display: block;
         
     }
     
-    article[title="contact"] > section{
+    main > article[title="contact"] > section{
         width: 80%;
         height:290px;
         display: block;
         margin: auto;
     }
     
-    article[title="contact"] > section > a > img{
+    main > article[title="contact"] > section > a > img{
         width: 60%;
         padding-top: 35%;
         margin-bottom:35%;
         
     }
-    article[title="contact"] > section > a > span{
+    main > article[title="contact"] > section > a > span{
         padding: 5% 20% 5% 20%;
       
     }

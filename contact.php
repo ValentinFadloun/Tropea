@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale1,shrink-to-fit=no"/>
-    <title>Tropea contact</title>
-    <style> @import "css/contact.css";
-    </style>
-</head>
-
-<body>
+<?php include('header.html') ; ?>
     <h2>Contact</h2>
-    
-    
+    <main>
     <article title="contact">
         <!---mail-->
         <section title="mail">
@@ -38,6 +27,7 @@
                 </a>
         </section>
     </article>
+    </main>
 </body>
 </html>
 

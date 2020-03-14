@@ -11,6 +11,7 @@ body{
     height: 100%;
     
 }
+
  h2{
     display: block;
     width: 100%;
@@ -28,6 +29,7 @@ img{
     margin-left: 25%;
     border-radius: 160px;
 }
+
 article{
     display: inline-block;
     position: relative;
@@ -47,9 +49,9 @@ iframe{
     
     
 }
-article[title="apropos"]{
+main > article[title="apropos"]{
     margin-left: 5%;
 }
-article > section[title="description"]{
+main > article > section[title="description"]{
     text-align: center
 }
