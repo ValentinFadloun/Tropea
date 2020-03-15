@@ -9,8 +9,7 @@ body{
     margin:0;
     font-size: 0;
     color: var(--grey-font);
-    width: 100%;
-    height: 100%;
+
         
     
 }
@@ -73,4 +72,88 @@ header > article > nav > ul > li > a {
     font-size: 1rem;
     color: white;/* devra être blanc une fois bgc de la page présent*/
     text-decoration : none;
+}
+
+
+nav{
+    visibility: hidden;
+    width: 0;
+    transition: .4s;
+    }
+    a {
+    display: block;
+    }
+
+    nav > div {
+    visibility: hidden;
+    }
+
+
+    button{ 
+    outline: none;
+    }
+.burger{
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 1px solid #AAA;
+    background: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+    transition: .4s;
+    cursor: pointer;
+    visibility: visible;
+}
+button.burger:hover{
+    box-shadow : 0 0 3px rgba(255, 255, 255, 0.753);
+}
+
+
+button::before,
+button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 41%;
+    width: 15%;
+    height: 10%;
+    transition: box-shadow .2s .4s, top .4s, bottom .4s, transform .4s;
+}
+
+.burger::before {
+    top: 25%;
+    background-color: var(--yellow-btn);
+    box-shadow: 0px 45px 0 0 var(--yellow-btn);
+    
+
+}
+
+.burger::after{
+    background-color: var(--yellow-btn);
+}
+
+
+.nav-open{   
+    position: fixed;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    left:0;
+    top: 0;
+    background-color:#000;
+    border: 1px white;
+    transition: .4s;
+
+}
+
+.nav-open > a {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.btn-open{
+    left: 65%;
+    transform: translateX(50%);
+    z-index: 20;
 }
