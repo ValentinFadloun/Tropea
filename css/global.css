@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 :root{
+    font-family: 'Roboto','sans-serif';
     font-size: 16px; /*1rem*/
     --yellow-btn: #FFE765;
     --grey-btn: #D3D3D3;
@@ -8,10 +11,7 @@
 body{
     margin:0;
     font-size: 0;
-    color: var(--grey-font);
-
-        
-    
+    color: var(--grey-font)
 }
 
 header{
@@ -36,46 +36,40 @@ margin: 0 20px 0 0;
 
 
 /*-----------Logo-----------------*/
-article:first-of-type > div > a > img{
+header > article:first-of-type > div > a > img{
     width: 35%;
     border-radius: 10%;
     margin: 0 0 0 80px;
 }
 /*---------------------- header > all articles -----------------*/
 
-article:nth-of-type(2), article:nth-of-type(3){
+header > article:nth-of-type(2), header > article:nth-of-type(3){
     display: flex;
 }
 /*----------------BTN " A propos de nous" + BTN " Voir la carte"-------------*/
-article:nth-of-type(2) > section > a {
+header > article:nth-of-type(2) > section > a {
     background-color: var(--grey-btn);
     padding:10px 10px 15px 10px;
     margin: 30px 10px 0 0px;
 }
 
 /*----------------------------------- Article sitcky -----------*/
-article:nth-of-type(3){
+header > article:nth-of-type(3){
     position: sticky;
 }
-article:nth-of-type(3) > section > a {
+header > article:nth-of-type(3) > section > a {
     background-color: var(--yellow-btn);
-    padding:20px 10px 15px 10px;
+    padding:5px 10px 20px 10px;
     margin: 30px 10px 0 0px;
 }
 
-article:nth-of-type(3) > section > a  > img{
+header > article:nth-of-type(3) > section > a  > img{
     padding-top:5px;
 }
 
 /*-------------Nav burger---------------*/
-header > article > nav > ul > li > a {
-    font-size: 1rem;
-    color: white;/* devra être blanc une fois bgc de la page présent*/
-    text-decoration : none;
-}
 
-
-nav{
+body > nav{
     visibility: hidden;
     width: 0;
     transition: .4s;
@@ -123,7 +117,7 @@ button::after {
     top: 25%;
     background-color: var(--yellow-btn);
     box-shadow: 0px 45px 0 0 var(--yellow-btn);
-    
+
 
 }
 
@@ -156,4 +150,98 @@ button::after {
     left: 65%;
     transform: translateX(50%);
     z-index: 20;
+} 
+/*-----------------------------------------------Responsive Desktop----------------------------*/
+@media screen and (max-width: 780px){ 
+
+/*--------------------------------------------------HEADER----------------------------------*/
+/*------------------logo-------------------------------*/    
+header > article:first-of-type > div > a > img {
+    width: 65%;
+    margin: 20px 0 20px 25px;
+}
+/*---------------- 2 Grey BTN ' a propos de nous' + ' voir la carte'--------------*/
+header > article:nth-last-child(2){
+display: none;
+} 
+
+/*------------------ 2 Yellow BTN ' nous trouver ' +  'Nous appeler '--------*/
+header > article:nth-of-type(3) > section > a > img{
+padding: 0px;
+}
+
+header > article:nth-of-type(3) > section > a {
+    background-color: var(--yellow-btn);
+    margin: 30px 15px 0 10px;
+    width: 40%;
+    height: 10%;
+    border-radius: 4px;
+    font-size: 0;
+
+}
+/*-----------------------BTN Burger---------------------*/
+.burger::before {
+    top: 30%;
+    box-shadow: 0px 28px 0 0 var(--yellow-btn);
+}
+
+
+button::before,
+button::after {
+    top: 45%;
+    width: 35%;
+    height: 10%;  
+    margin: 0 0 0 5px ; 
+}
+
+}
+
+
+
+
+/*-----------------------------------------------Responsive mobiles ----------------------------*/
+@media all and (max-device-width: 480px)
+{
+/*--------------------------------------------------HEADER----------------------------------*/
+/*------------------logo-------------------------------*/    
+header > article:first-of-type > div > a > img {
+    width: 65%;
+    margin: 20px 0 20px 25px;
+}
+/*---------------- 2 Grey BTN ' a propos de nous' + ' voir la carte'--------------*/
+header > article:nth-last-child(2){
+display: none;
+} 
+
+/*------------------ 2 Yellow BTN ' nous trouver ' +  'Nous appeler '--------*/
+header > article:nth-of-type(3) > section > a > img{
+padding: 0px;
+}
+
+header > article:nth-of-type(3) > section > a {
+    background-color: var(--yellow-btn);
+    margin: 30px 15px 0 10px;
+    width: 40%;
+    height: 10%;
+    border-radius: 4px;
+    font-size: 0;
+
+}
+/*-----------------------BTN Burger---------------------*/
+.burger::before {
+    top: 30%;
+    box-shadow: 0px 28px 0 0 var(--yellow-btn);
+}
+
+
+button::before,
+button::after {
+    top: 45%;
+    width: 35%;
+    height: 10%;  
+    margin: 0 0 0 5px ; 
+}
+
+
+
 }
